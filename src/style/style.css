@@ -1,0 +1,152 @@
+:root{
+    --color-background:#FFFFFF;
+    --color-text:#FF6060;
+    --color-text-Dark-Background:#FFFFFF;
+    --color-thing: #FF6060;
+    --color-thing-backgound:#F6F6F6;
+    --color-footer-background:#000000;
+    --color-footer-text:#FFFFFF;
+}
+/****** General ***********/
+/* @font-face {
+    font-family: 'Raleway';
+    src: url('../police/static/Raleway-Bold.ttf') format('truetype');
+} */
+
+* {
+    font-family: Montserrat,'Montserrat';
+    font-weight:500;
+    width:100%;
+}
+
+body{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* div{
+    background:var(--color-background);
+}
+
+collapse{
+    background-color: var(--color-thing);
+    color:var(--color-thing-backgound);
+} */
+/*** HEADER ***/
+.header-section{
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header-image{
+    width:12%;
+    height:auto;
+}
+.header-nav{
+    padding:auto;
+}
+
+nav{
+    text-align:right;
+    margin-top:auto;
+    text-decoration: none;
+    text-decoration-line:none;
+}
+a {
+    text-decoration: none;
+    color:var(--color-text);
+    margin-left:20px;
+    padding:20px;
+}
+a:hover{
+    text-decoration:underline;
+}
+/***  HOME  ***/
+.home-picture{
+    height: 250px;
+	width: 100%;
+	border-radius: 20px;
+	object-fit: cover;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.home-card-section{
+    width:100%;
+    background-color: var(--color-thing-backgound);
+    border-radius: 20px;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-wrap:wrap;
+    direction:column;
+    justify-content: space-around;
+
+}
+/*** CARD ***/
+.card-link{
+    width:30%;
+    margin-left:0px;
+    margin-top:20px;
+    padding:0px;
+}
+.card-article{
+    width:100%;
+}
+.card-img{
+    width:100%;
+}
+h3.card-content {
+    color:var(--color-text-Dark-Background);
+    position: relative;
+    width:60%;
+    padding:0;
+    margin:0;
+    bottom: 50px; 
+    left: 15px;
+}
+/*** Erreur 404 ***/
+.erreur404-message{
+    width:100%;
+    text-align: center;
+    color:var(--color-text);
+    margin-top:50px;
+    margin-bottom:200px;
+}
+.erreur404-texte-404{
+    font-size:288px;
+    font-weight: 700;
+    margin-left:auto;
+    margin-right:auto;
+}
+.erreur404-sousTexte-404{
+    font-size:36px;
+    font-weight: 500;
+    margin-top:-30px;
+    margin-bottom:100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.erreur404-lien-retour-home{
+    font-size:18px;
+    font-weight: 500;
+    margin-top:100px;
+    
+}
+
+
+/*** FOOTER ***/
+.footer-section{
+    height:100px;
+    background-color: var(--color-footer-background);
+    color:var(--color-footer-text);
+    text-align:center;
+    padding-top:40px;
+    margin-top:auto;
+}
+.footer-section img{
+    width:60px;
+}
+
