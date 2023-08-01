@@ -25,7 +25,7 @@ function Home() {
       <section className="home-card-section">
       
       
-      { properties?.map((property, index) =>  <Card key={property.id - index} title={property.title} cover={property.cover} /> )}
+      { properties?.map((property, index) =>  <Card key={`${property.id} - ${index}`} id={property.id} title={property.title} cover={property.cover} /> )}
   
       </section>
   
