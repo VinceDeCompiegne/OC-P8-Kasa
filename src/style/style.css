@@ -16,7 +16,6 @@
 * {
     font-family: Montserrat,'Montserrat';
     font-weight:500;
-    width:100%;
 }
 
 body{
@@ -83,29 +82,46 @@ a:hover{
     flex-wrap:wrap;
     direction:column;
     justify-content: space-around;
-
 }
 /*** CARD ***/
 .card-link{
-    width:30%;
     margin-left:0px;
     margin-top:20px;
     padding:0px;
 }
 .card-article{
-    width:100%;
+    width:300px;
+    height:300px;
+    margin-left:5px;
+    margin-right:5px;
+    position:relative;
+    
+}
+.card-article img{
+    width:300px;
+    height:300px;
+    border-radius: 20px;
+    position:absolute;
+    object-fit: cover;
+    bottom:0px;
+    left:0px;
 }
 .card-img{
-    width:100%;
+    z-index:1;
+}
+.card-img-cache{
+    opacity:1;
+    z-index:2;
 }
 h3.card-content {
     color:var(--color-text-Dark-Background);
-    position: relative;
+    position: absolute;
     width:60%;
     padding:0;
     margin:0;
-    bottom: 50px; 
+    bottom: 15px; 
     left: 15px;
+    z-index:3;
 }
 /*** Erreur 404 ***/
 .erreur404-message{

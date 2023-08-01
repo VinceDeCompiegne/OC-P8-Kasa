@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom'
 import '../../style/style.css'
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 function Erreur404() {
     return (
