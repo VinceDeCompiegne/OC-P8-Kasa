@@ -162,6 +162,7 @@ h3.card-content {
     width:80%;
     margin-left:auto;
     margin-right:auto;
+    position:relative;
 }
 .collapsible {
     text-align: left;
@@ -200,10 +201,53 @@ h3.card-content {
     color:var(--color-text);
 }
 .content.block{
+    animation: ScaleDown 0.3s linear 0s 1 normal forwards;
     display: block;
+    height:100%;
 }
-    .content.none{
-    display: none;
+@keyframes ScaleDown {
+
+    0% {
+         transform: scaley(0%); 
+    }
+    100% {
+        transform: scaley(100%);
+    }
+}
+.content.none{
+    animation: scaleUp 0.3s linear 0s 1 normal forwards;
+}
+@keyframes scaleUp {
+    0% {
+        transform: scaley(100%);
+    }
+    100% {
+        transform: scaley(0%);
+        display: none;
+    }
+}
+
+.collapse-animation-fleche-h{
+    animation: rotate 0.3s linear 0s 1 normal forwards;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+.collapse-animation-fleche-b{
+    animation: derotate 0.3s linear 0s 1 normal forwards;
+}
+@keyframes derotate {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 /*** A PROPOS ***/
 .a-propos-marge{
