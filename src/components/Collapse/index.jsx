@@ -6,8 +6,8 @@ import FlecheH from "../../assets/images/FlecheH.svg"
 
 function Collapse({title,description}) {
 
-    const[Visible,setVisible] = useState ("none",[])
-    const[Fleche,setFleche] = useState ("collapse-animation-fleche-h",[])
+    const[Visible,setVisible] = useState ("",[])
+    const[Fleche,setFleche] = useState ("",[])
 
     const handleToggle = () => {
         setVisible((current) => !current);
@@ -17,7 +17,7 @@ function Collapse({title,description}) {
 
     return (
         <section className="collapse"> 
-            <div onClick={handleToggle} className="collapse-bouton">
+            <div onClick={() => handleToggle()} className="collapse-bouton">
                 <p className="collapsible">{title}</p>
                 <img className={`collapse-fleche ${Fleche}`} src={FlecheH} alt="Indicateur d'ouverture du Collapse" />
             </div>

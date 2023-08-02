@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Fiche from './pages/Fiche'
 import Apropos from './pages/Apropos'
-// import Erreur404 from './pages/Erreur404'
+import Erreur404 from './pages/Erreur404'
 import './style/style.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,10 +13,11 @@ root.render(
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/fiche/:appart" element={<Fiche />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/fiche/*" element={<Fiche />} />
+          <Route path="/home/fiche/:appart" element={<Fiche />} />
           <Route path="/apropos" element={<Apropos />} />
-          {/* <Route path="/*" element={<Erreur404 />} /> */}
+          <Route path="/erreur" element={<Erreur404 />} />            
         </Routes>
       </Router>
   </React.StrictMode>

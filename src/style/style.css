@@ -199,11 +199,12 @@ h3.card-content {
     overflow: hidden;
     background-color: var(--color-thing-backgound);
     color:var(--color-text);
+    display: none;
 }
 .content.block{
     animation: ScaleDown 0.3s linear 0s 1 normal forwards;
     display: block;
-    height:100%;
+    
 }
 @keyframes ScaleDown {
 
@@ -220,6 +221,7 @@ h3.card-content {
 @keyframes scaleUp {
     0% {
         transform: scaley(100%);
+        display: block;
     }
     100% {
         transform: scaley(0%);
@@ -253,4 +255,51 @@ h3.card-content {
 .a-propos-marge{
     margin-top:20px;
     margin-bottom:20px;
+}
+/*** CARROUSSEL ***/
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Gestion des fleches du carrousel */
+.carroussel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 250px;
+	position: relative;
+}
+.carroussel-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
+}
+.carroussel .arrow {
+	position: absolute;
+}
+.carroussel .arrow_left {
+	left: 10px;
+}
+.carroussel .arrow_right {
+	right: 10px;
+}
+/* Gestion des points du carrousel */
+.dots {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+}
+.dot {
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+}
+.dot_true {
+	background-color: #fff;
 }

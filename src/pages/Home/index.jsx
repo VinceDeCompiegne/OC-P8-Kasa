@@ -6,14 +6,16 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Card  from '../../components/Card'
 
- import { useFetch } from "../../utils/UseFetch"
+import { useFetch } from "../../utils/UseFetch"
 
 import imageHeader from '../../assets/images/home.png'
+
+// import { useParams } from "react-router-dom";
 
 function Home() {
 
   const { data, isLoading } =  useFetch(`http://localhost:8080/api/properties`)
-  
+
   try{
     
     const properties = data
