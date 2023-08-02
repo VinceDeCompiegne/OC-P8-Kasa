@@ -6,7 +6,7 @@ import rectangle from '../../assets/images/rectangle.png'
 
 function Card({id,title,cover}) {
     return (
-        <Link className="card-link" to={`Fiche/${id}`}>
+        <Link className="card-link" to={`fiche/${id}`}>
             <article className="card-article">
                     <img className="card-img" src={cover} alt=" de la chambre d'hôtel montrant un lit" />
                     <img className="card-img-cache" src={rectangle} alt=" de la chambre d'hôtel montrant un lit" />

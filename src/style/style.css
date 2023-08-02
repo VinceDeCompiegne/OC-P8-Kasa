@@ -23,15 +23,6 @@ body{
     margin-left:auto;
     margin-right:auto;
 }
-
-/* div{
-    background:var(--color-background);
-}
-
-collapse{
-    background-color: var(--color-thing);
-    color:var(--color-thing-backgound);
-} */
 /*** HEADER ***/
 .header-section{
     align-items: center;
@@ -165,4 +156,54 @@ h3.card-content {
 .footer-section img{
     width:60px;
 }
-
+/*** COLLAPSE ***/
+.collapse{
+    margin-bottom:20px;
+}
+.collapsible {
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    padding:0px;
+    margin:0px;
+    height:20px;
+}
+.collapse-fleche{
+    background-color: var(--color-thing);
+    color:var(--color-thing-backgound);
+    margin-left:auto;
+    width:15px;
+    height:15px; 
+    padding:0px;
+    margin:0px;
+}
+.collapse-bouton{
+    background-color: var(--color-thing);
+    color: var(--color-thing-backgound);
+    border-radius: 20px 20px 0px 0px;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    display:flex;
+    justify-content: space-between;
+}
+.active, .collapsible:hover {
+    background-color: var(--color-thing);
+}
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: var(--color-thing-backgound);
+    color:var(--color-text);
+}
+.content.block{
+    display: block;
+}
+    .content.none{
+    display: none;
+}
+/*** A PROPOS ***/
+.a-propos-marge{
+    margin-top:50px;
+    margin-bottom:200px;
+}
