@@ -159,6 +159,9 @@ h3.card-content {
 /*** COLLAPSE ***/
 .collapse{
     margin-bottom:20px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 }
 .collapsible {
     text-align: left;
@@ -204,6 +207,6 @@ h3.card-content {
 }
 /*** A PROPOS ***/
 .a-propos-marge{
-    margin-top:50px;
-    margin-bottom:200px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
