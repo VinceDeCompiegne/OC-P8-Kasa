@@ -16,7 +16,7 @@ function Apropos() {
         <Header />
         <img className="home-picture" src={imageHeader} alt="visuel de la page home"/>
         <div className="a-propos-marge">
-            {data.map((info,index)=> <Collapse key={`${index}`} title={info.title} description={info.description}/>)}
+            {data.map((info,index)=> <Collapse key={`${index}`} className="a-propos-collapse" title={info.title} description={info.description}/>)}
         </div>
         <Footer />
     </Fragment>

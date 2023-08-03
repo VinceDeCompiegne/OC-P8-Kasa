@@ -16,6 +16,11 @@
 * {
     font-family: Montserrat,'Montserrat';
     font-weight:500;
+
+    h1,h2,h3 {
+        color:var(--color-text);
+    }
+
 }
 
 body{
@@ -159,9 +164,9 @@ h3.card-content {
 /*** COLLAPSE ***/
 .collapse{
     margin-bottom:20px;
-    width:80%;
     margin-left:auto;
     margin-right:auto;
+    width:100%;
     position:relative;
 }
 .collapsible {
@@ -255,6 +260,9 @@ h3.card-content {
 .a-propos-marge{
     margin-top:20px;
     margin-bottom:20px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 }
 /*** CARROUSSEL ***/
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
@@ -262,6 +270,7 @@ h3.card-content {
 .carroussel {
 	display: flex;
 	flex-direction: column;
+
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -272,6 +281,7 @@ h3.card-content {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+    border-radius: 20px;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
@@ -314,4 +324,74 @@ h3.card-content {
     flex-wrap:wrap;
     direction:column;
     justify-content: space-around;
+}
+.fiche-info{
+    display:flex;
+    flex-wrap:wrap;
+    direction:column;
+    justify-content: space-between;
+    padding-top:20px;
+    padding-bottom: 20px;
+    & h1{
+        color:var(--color-text);
+        font-weight:500;
+        font-size: 36px;
+        padding:5px;
+        margin:0px;
+    }
+    & h3{
+        color:var(--color-text);
+        font-weight:500;
+        font-size: 18px;
+        padding:5px;
+        margin:0px;
+        margin-bottom:20px;
+    }
+}
+.fiche-location-tag{
+    padding:5px 20px 5px 20px;
+    margin-right:10px;
+    border-radius: 20px;
+    background-color: var(--color-thing);
+    color:var(--color-thing-backgound);
+}
+.fiche-title{
+    display:block;
+    width:100%;
+}
+.fiche-portrait{
+    height: 100px;
+	width: 100px;
+	border-radius: 50px;
+	object-fit: cover;
+    justify-content: center;
+    margin-bottom:20px;
+}
+.fiche-host{
+    display:block;
+}
+.fiche-host-identite{
+    display:flex;
+    width:200px;
+    & h3{
+        width:100px;
+    }
+}
+.ficheDescription{
+    display:flex;
+    justify-content: space-around; 
+    width:100%;
+    margin-top:30px;
+}
+.fiche-collapse{
+    width:40%;
+    margin-left:auto;
+    margin-right:auto; 
+} 
+/*** RATING ***/
+.rating-section{
+    display:flex;
+    & img{
+        width:40px;
+    }
 }

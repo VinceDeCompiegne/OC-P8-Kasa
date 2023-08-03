@@ -15,7 +15,7 @@ import imageHeader from '../../assets/images/home.png'
 
 function Home() {
 
-  const { data, isLoading, error } =  useFetch(`http://localhost:8080/api/properties`)
+  const { data, isLoading, error } =  useFetch(`http://localhost:8080/api/properties`,[])
 
   try{
     
