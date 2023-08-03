@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { Navigate   } from 'react-router-dom'
 
 import '../../style/style.css'
 
@@ -14,12 +15,16 @@ import imageHeader from '../../assets/images/home.png'
 
 function Home() {
 
-  const { data, isLoading } =  useFetch(`http://localhost:8080/api/properties`)
+  const { data, isLoading, error } =  useFetch(`http://localhost:8080/api/properties`)
 
   try{
     
     const properties = data
-    return( !isLoading?(  <Fragment>
+
+    if(error&!isLoading){return(<Navigate  to="/erreur" />)}
+
+
+    return(!isLoading?(  <Fragment>
       <Header/>
      
       <img className="home-picture" src={imageHeader} alt="visuel de la page home"/>
@@ -39,16 +44,10 @@ function Home() {
   :
   (<Fragment>
       <Header/>
-     
       <img className="home-picture" src={imageHeader} alt="visuel de la page home"/>
-      
       <section className="home-card-section">
-      
-      
-      <div>Waiting please !</div>
-  
+        <div>Waiting please !</div>
       </section>
-  
       <Footer />
   </Fragment>)
   

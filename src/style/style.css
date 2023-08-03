@@ -303,3 +303,15 @@ h3.card-content {
 .dot_true {
 	background-color: #fff;
 }
+/*** FICHE ***/
+.fiche-card-section{
+    width:100%;
+    background-color: var(--color-thing-backgound);
+    border-radius: 20px;
+    margin-bottom:20px;
+
+    display:flex;
+    flex-wrap:wrap;
+    direction:column;
+    justify-content: space-around;
+}

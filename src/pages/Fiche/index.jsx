@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { useParams, redirect } from 'react-router-dom'
+import { useParams, Navigate   } from 'react-router-dom'
 
 import '../../style/style.css'
 
@@ -19,7 +19,8 @@ function Fiche() {
     const { appart } = useParams()
     const { data, isLoading, error } =  useFetch(`http://localhost:8080/api/properties/${appart}`)
 
-    if (error){redirect("/erreur")}
+
+    if(error&!isLoading){return(<Navigate  to="/erreur" />)}
 
     return (
          (!isLoading)?(
@@ -31,7 +32,9 @@ function Fiche() {
          ):(
             <Fragment>
                 <Header />
-                    <div>Waiting please !</div>  
+                <section className="fiche-card-section">
+                    <div>Waiting please !</div>
+                </section>
                 <Footer />
             </Fragment>
         )
