@@ -16,13 +16,12 @@ function Collapse({title,description}) {
     }
 
     return (
-        <section className="collapse"> 
-            <div onClick={() => handleToggle()} className="collapse-bouton">
+        <section  className="collapse"> 
+            <div data-testid="job-Click" onClick={() => handleToggle()} className="collapse-bouton">
                 <p className="collapsible">{title}</p>
                 <img className={`collapse-fleche ${Fleche}`} src={FlecheH} alt="Indicateur d'ouverture du Collapse" />
             </div>
-
-            <div className={`content ${Visible}`}>
+            <div data-testid='job-desc' className={`content ${Visible}`}>
                 <Fragment>{description}</Fragment>
             </div>
         </section>

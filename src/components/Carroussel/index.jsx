@@ -5,7 +5,7 @@ import '../../style/style.css'
 import FlecheG from "../../assets/images/FlecheG.svg"
 import FlecheD from "../../assets/images/FlecheD.svg"
 
-function Collapse({image}) {
+function Carroussel({image}) {
 
     const[indexImage,setIndexImage] = useState (0,[])
 
@@ -44,7 +44,7 @@ function Collapse({image}) {
 
         <div className="dots">
 
-          { image.map((object, index) => <div key={index} className={`dot dot_${(index)===(indexImage)}`}></div>) }
+          {/* { image.map((object, index) => <div key={index} className={`dot dot_${(index)===(indexImage)}`}></div>) } */}
 
         </div>
 
@@ -69,4 +69,4 @@ function Collapse({image}) {
   }
 }
 
-export default Collapse
+export default Carroussel
