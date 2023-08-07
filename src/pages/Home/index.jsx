@@ -26,19 +26,17 @@ function Home() {
 
     return(!isLoading?(  <Fragment>
       <Header/>
-     
-      <img className="home-picture" src={imageHeader} alt="visuel de la page home"/>
-      
-      <section className="home-card-section">
-      
-      
-      { properties?.map((property, index) =>  <Card key={`${property.id} - ${index}`} 
-                                                    id={property.id} 
-                                                    title={property.title} 
-                                                    cover={property.cover} /> )}
-  
-      </section>
-  
+        <img className="home-picture" src={imageHeader} alt="visuel de la page home"/>
+
+            <section className="home-card-section">
+        
+        
+        { properties?.map((property, index) =>  <Card key={`${property.id} - ${index}`} 
+                                                      id={property.id} 
+                                                      title={property.title} 
+                                                      cover={property.cover} /> )}
+    
+        </section> 
       <Footer />
   </Fragment>)
   :

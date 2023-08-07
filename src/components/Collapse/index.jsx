@@ -1,4 +1,4 @@
-import { useState  } from 'react'
+import { useState,Fragment } from 'react'
 
 import '../../style/style.css'
 
@@ -23,9 +23,8 @@ function Collapse({title,description}) {
             </div>
 
             <div className={`content ${Visible}`}>
-                <p>{description}</p>
+                <Fragment>{description}</Fragment>
             </div>
-
         </section>
     )
   }
