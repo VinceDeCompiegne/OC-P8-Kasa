@@ -231,12 +231,10 @@ h3.card-content {
 }
 .content.none{
     animation: scaleUp 0.3s linear 0s 1 normal forwards;
-    /* display: block; */
 }
 @keyframes scaleUp {
     0% {
         transform: scaley(1.0);
-        /* display: block; */
     }
     100% {
         transform: scaley(0.0);
