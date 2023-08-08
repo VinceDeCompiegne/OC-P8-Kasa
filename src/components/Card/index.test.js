@@ -4,15 +4,18 @@ import '@testing-library/jest-dom'
 
 import { Fragment } from 'react'
 import { MemoryRouter } from 'react-router-dom'
+
+const data = {id:'c67ab8a7',title:'Appartement cosy',cover:'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg'}
+
 describe('Card', () => {
     test('Should render Information', async () => {
         render(
             <Fragment>
                 <MemoryRouter>
                 <Card 
-                    id="c67ab8a7"
-                    title="Appartement cosy"
-                    cover="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
+                    id={data.id}
+                    title={data.title}
+                    cover={data.cover}
                 />
                 </MemoryRouter>
             </Fragment>

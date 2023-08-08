@@ -26,17 +26,20 @@ function Carroussel({image}) {
 
         <img
           className="arrow arrow_left"
+          data-testid="job-carroussel-arrow_left"
           src={FlecheG}
           alt="carroussel gauche"
           onClick={()=>handleGauche()}
         />
         <img
           className="carroussel-img"
+          data-testid="job-carroussel-img"
           src={img}
           alt="carroussel"
         />
         <img
           className="arrow arrow_right"
+          data-testid="job-carroussel-arrow_right"
           src={FlecheD}
           alt="carroussel droite"
           onClick={()=>handleDroite()}
@@ -44,7 +47,7 @@ function Carroussel({image}) {
 
         <div className="dots">
 
-          {/* { image.map((object, index) => <div key={index} className={`dot dot_${(index)===(indexImage)}`}></div>) } */}
+          { image.map((object, index) => <div key={index} data-testid="job-carroussel-dot" className={`dot dot_${(index)===(indexImage)}`}></div>) }
 
         </div>
 
