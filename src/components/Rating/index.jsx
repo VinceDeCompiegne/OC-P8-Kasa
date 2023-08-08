@@ -7,11 +7,11 @@ function Rating({rating}) {
     
     return (
         <div className="rating-section">
-            <img className="rating" src={(rating>=1)?starActive:starInactive} alt="Rating Star 1"/>
-            <img className="rating" src={(rating>=2)?starActive:starInactive} alt="Rating Star 2"/>
-            <img className="rating" src={(rating>=3)?starActive:starInactive} alt="Rating Star 3"/>
-            <img className="rating" src={(rating>=4)?starActive:starInactive} alt="Rating Star 4"/>
-            <img className="rating" src={(rating>=5)?starActive:starInactive} alt="Rating Star 5"/>
+            <img className="rating" data-testid="job-rating" src={(rating>=1)?starActive:starInactive} alt="Rating Star 1"/>
+            <img className="rating" data-testid="job-rating" src={(rating>=2)?starActive:starInactive} alt="Rating Star 2"/>
+            <img className="rating" data-testid="job-rating" src={(rating>=3)?starActive:starInactive} alt="Rating Star 3"/>
+            <img className="rating" data-testid="job-rating" src={(rating>=4)?starActive:starInactive} alt="Rating Star 4"/>
+            <img className="rating" data-testid="job-rating" src={(rating>=5)?starActive:starInactive} alt="Rating Star 5"/>
         </div>
     )
   }
