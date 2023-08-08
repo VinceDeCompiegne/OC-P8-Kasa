@@ -55,7 +55,7 @@ function Carroussel({image}) {
     
     )
 
-  }else{
+  }else if(image.length===1){
 
     return(
         <section className="carroussel"> 
@@ -65,6 +65,16 @@ function Carroussel({image}) {
             src={img}
             alt="carroussel"
             />
+
+        </section>
+    )
+
+  }else{
+
+    return(
+        <section className="carroussel"> 
+
+            <p>Carroussel vide</p>
 
         </section>
     )

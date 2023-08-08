@@ -11,8 +11,6 @@ import { useFetch } from "../../utils/UseFetch"
 
 import imageHeader from '../../assets/images/home.png'
 
-// import { useParams } from "react-router-dom";
-
 function Home() {
 
   const { data, isLoading, error } =  useFetch(`http://localhost:8080/api/properties`,[])
@@ -23,13 +21,11 @@ function Home() {
 
     if(error&!isLoading){return(<Navigate  to="/erreur" />)}
 
-
     return(!isLoading?(  <Fragment>
       <Header/>
         <img className="home-picture" src={imageHeader} alt="visuel de la page home"/>
 
             <section className="home-card-section">
-        
         
         { properties?.map((property, index) =>  <Card key={`${property.id} - ${index}`} 
                                                       id={property.id} 

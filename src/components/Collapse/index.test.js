@@ -41,7 +41,7 @@ describe('Collapse', () => {
         const jobClick = screen.getByTestId('job-Click')
         fireEvent.click(jobClick)
         const jobDescriptionElement = screen.getByTestId(`job-desc`)
-        expect(jobDescriptionElement).toHaveClass('block')
+        expect(jobDescriptionElement).toHaveClass('collapse-animation-block')
     })
     test('Should render Description hidden', async () => {
         render(
@@ -56,6 +56,6 @@ describe('Collapse', () => {
         fireEvent.click(jobClick)
         fireEvent.click(jobClick)
         const jobDescriptionElement = screen.getByTestId(`job-desc`)
-        expect(jobDescriptionElement).toHaveClass('none')
+        expect(jobDescriptionElement).toHaveClass('collapse-animation-none')
     })
 })

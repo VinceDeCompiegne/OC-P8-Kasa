@@ -28,14 +28,11 @@ function Fiche() {
                         <article className="fiche-info">
                         <h1>{data.title}</h1>
                             <section className="fiche-location">
-                            
-                                <div className="fiche-title">
-                                    
+                                <div className="fiche-title"> 
                                     <h3>{data.location}</h3>
                                     <div className="fiche-tags">
                                         {data.tags.map((tag,index)=><span key={`tag-${index}`} className="fiche-location-tag">{tag}</span>)}  
                                     </div>
-                                    
                                 </div>
                             </section>
                             <section className="fiche-host">

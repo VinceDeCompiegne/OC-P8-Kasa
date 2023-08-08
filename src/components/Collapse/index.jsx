@@ -11,7 +11,7 @@ function Collapse({title,description}) {
 
     const handleToggle = () => {
         setVisible((current) => !current);
-        if(Visible==="block"){setVisible("none")}else{setVisible("block")}
+        if(Visible==="collapse-animation-block"){setVisible("collapse-animation-none")}else{setVisible("collapse-animation-block")}
         if(Fleche==="collapse-animation-fleche-h"){setFleche("collapse-animation-fleche-b")}else{setFleche("collapse-animation-fleche-h")}
     }
 
@@ -22,7 +22,7 @@ function Collapse({title,description}) {
                 <img className={`collapse-fleche ${Fleche}`} src={FlecheH} alt="Indicateur d'ouverture du Collapse" />
             </div>
             <div data-testid='job-desc' className={`content ${Visible}`}>
-                <Fragment>{description}</Fragment>
+                <article className="collapse-article">{description}</article>
             </div>
         </section>
     )

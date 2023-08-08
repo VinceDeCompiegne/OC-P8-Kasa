@@ -32,4 +32,5 @@ export function useFetch(url) {
           }, [])
           
           return { isLoading, data, error }
+          
         }

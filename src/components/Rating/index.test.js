@@ -8,6 +8,22 @@ import { Fragment } from 'react'
 // import starInactive from '../../assets/images/star-inactive.svg'
 
 describe('Carroussel', () => {
+    test('Should render Rating==0', async () => {
+        render(
+            <Fragment>
+                <Rating 
+                    rating="0"
+                /> 
+            </Fragment>
+        )
+        const jobElement = screen.getAllByTestId(`job-rating`)
+        
+        expect(jobElement[0].src).toMatch(new RegExp('star-inactive'))
+        expect(jobElement[1].src).toMatch(new RegExp('star-inactive'))
+        expect(jobElement[2].src).toMatch(new RegExp('star-inactive'))
+        expect(jobElement[3].src).toMatch(new RegExp('star-inactive'))
+        expect(jobElement[4].src).toMatch(new RegExp('star-inactive'))
+    })
     test('Should render Rating==1', async () => {
         render(
             <Fragment>

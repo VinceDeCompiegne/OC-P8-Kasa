@@ -20,4 +20,35 @@ describe('Carroussel', () => {
         const jobDescriptionElement = screen.getAllByTestId(`job-carroussel-dot`)
         expect(jobDescriptionElement[data.pictures.length-1]).toHaveClass('dot_true')
     })
+
+    const dataOne = {pictures:["https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"]}
+
+    test('Should render Empty', async () => {
+        render(
+            <Fragment>
+                <Carroussel 
+                    image={dataOne.pictures}
+                /> 
+            </Fragment>
+        )
+        const jobArrowLeft = screen.queryAllByText(`job-carroussel-arrow_left`)
+        expect(jobArrowLeft).not.toHaveLength(1)
+
+        const jobElementArrowRight = screen.queryAllByText(`job-carroussel-arrow_right`)
+        expect(jobElementArrowRight).not.toHaveLength(1)
+    })
+
+    const dataVide = {pictures:[]}
+
+    test('Should render One Pictures', async () => {
+        render(
+            <Fragment>
+                <Carroussel 
+                    image={dataVide.pictures}
+                /> 
+            </Fragment>
+        )
+        const jobDescriptionElement = screen.queryAllByText('Carroussel vide')
+        expect(jobDescriptionElement).toHaveLength(1)
+    })
 })
