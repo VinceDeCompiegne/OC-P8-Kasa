@@ -3,7 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import { Fragment } from 'react'
-import '../../style/style.css'
 
 describe('Collapse', () => {
     test('Should render Title', async () => {

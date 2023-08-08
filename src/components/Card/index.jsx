@@ -6,11 +6,11 @@ import rectangle from '../../assets/images/rectangle.png'
 
 function Card({id,title,cover}) {
     return (
-        <Link className="card-link" to={`fiche/${id}`}>
-            <article className="card-article">
-                    <img className="card-img" src={cover} alt=" de la chambre d'hôtel montrant un lit" />
-                    <img className="card-img-cache" src={rectangle} alt=" de la chambre d'hôtel montrant un lit" />
-                    <h3 className="card-content">{title}</h3>
+        <Link className="card-link" data-testid="job-link-card" to={`fiche/${id}`}>
+            <article  className="card-article">
+                    <img className="card-img" data-testid="job-img-card" src={cover} alt="reprsentation de l'appartement sur carte" />
+                    <img className="card-img-cache" src={rectangle} alt="Ombre sur la carte" />
+                    <h3 className="card-content" data-testid="job-h3-card">{title}</h3>
             </article>
         </Link>
     )
