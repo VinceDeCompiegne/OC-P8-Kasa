@@ -215,6 +215,7 @@ h3.card-content {
     color:var(--color-text);
     display: none;
 }
+
 .collapse-animation-block{
     animation: scale-Down 0.3s linear 0s 1 normal forwards;
     display: block;
@@ -228,8 +229,6 @@ h3.card-content {
         transform: scaley(100%);
     }
 }
-
-
 .collapse-animation-none {
     animation: scale-Up 0.3s linear 0s 1 normal forwards;
     display: block;
