@@ -13,17 +13,11 @@ import imageHeader from '../../assets/images/home.png'
 
 function Home() {
 
-  var { data, isLoading, error } =  useFetch(`https://oc-p8-kasa.vincent-deramaux-portfolio.fr/api/properties`,[]);
-  
-  if (localStorage.getItem('home')!=null){
-    data = localStorage.getItem('home');
-  }
-  
+  const { data, isLoading, error } =  useFetch(`https://oc-p8-kasa.vincent-deramaux-portfolio.fr/api/properties`,[]);
+ 
   try{
     
     const properties = data;
-
-    localStorage.setItem('home',properties);
 
     if(error&!isLoading){return(<Navigate  to="/erreur" />)}
 
