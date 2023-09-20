@@ -15,7 +15,7 @@ import Rating from "../../components/Rating"
 function Fiche() {
 
     const { appart } = useParams()
-    const { data, isLoading, error } =  useFetch(`http://localhost:8080/api/properties/${appart}`,[])
+    const { data, isLoading, error } =  useFetch(`https://oc-p8-kasa.vincent-deramaux-portfolio.fr/api/properties/${appart}`,[])
 
 
     if(error&!isLoading){return(<Navigate  to="/erreur" />)}
