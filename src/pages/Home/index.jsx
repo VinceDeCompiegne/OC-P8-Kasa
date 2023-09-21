@@ -13,7 +13,7 @@ import imageHeader from '../../assets/images/home.png'
 
 function Home() {
 
-  const { data, isLoading, error } =  useFetch(`https://oc-p8-kasa.vincent-deramaux-portfolio.fr/api/properties`,[]);
+  const { data, isLoading, error } =  useFetch(`api/properties`,[]);
  
   try{
     
