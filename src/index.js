@@ -15,6 +15,7 @@ root.render(
           <Route path="" element={<Home />} />
           <Route path="/fiche/:appart" element={<Fiche />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/OC-P8-Kasa" element={<Home />} />
           <Route path="/home/fiche/:appart" element={<Fiche />} />
           <Route path="/apropos" element={<Apropos />} />
           <Route path="/erreur" element={<Erreur404 />} />
