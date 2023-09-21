@@ -15,7 +15,7 @@ export function useFetch(url) {
                   method: 'GET',
                   headers: {
                       'Content-Type': 'application/json; charset=utf-8',
-                      'Accept': 'text/html',
+                      'Accept-Encoding': 'gzip, deflate'
                       }}
                 const response = await fetch(url,config)
                 const data = await response.json()
