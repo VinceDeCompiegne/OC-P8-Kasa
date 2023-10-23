@@ -2,18 +2,18 @@
 
 -  Is a professionalizing project for the development of the site of a real estate agency.
 
-# Technology used
+## Technology used
 
-## For runtime
+>### For runtime
 - React
 - React-dom
 
-## For testing
+>### For testing
 - Jest
 
-# Website 
+## Website 
 
--  [link](https://github.com/VinceDeCompiegne/OC-P8-Kasa)
+-  [Kasa website](https://github.com/VinceDeCompiegne/OC-P8-Kasa)
 ---
 
 ## Available Scripts
